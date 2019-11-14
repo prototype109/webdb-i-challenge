@@ -22,7 +22,7 @@ server.get("/:id", validateId, async (req, res) => {
 server.post("/", validateAccount, async (req, res) => {
   try {
     const accounts = await db("accounts").insert(req.body);
-    res.status(200).json(accounts);
+    res.status(201).json(accounts);
   } catch (error) {
     res.status(500).json(error);
   }
