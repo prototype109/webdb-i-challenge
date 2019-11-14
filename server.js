@@ -15,6 +15,10 @@ server.get("/", async (req, res) => {
   }
 });
 
+server.get("/:id", validateId, async (req, res) => {
+  res.status(200).json(req.account);
+});
+
 server.post("/", validateAccount, async (req, res) => {
   try {
     const accounts = await db("accounts").insert(req.body);

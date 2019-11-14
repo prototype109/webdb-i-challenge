@@ -3,6 +3,9 @@
 ### GET ACCOUNTS
 GET {{url}}/
 
+### GET ACCOUNTS
+GET {{url}}/1
+
 ### POST ACCOUNTS WORKING
 POST {{url}}/
 Content-Type: application/json
