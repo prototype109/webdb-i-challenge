@@ -35,6 +35,17 @@ server.put("/:id", validateId, validateAccount, async (req, res) => {
   }
 });
 
+server.delete("/:id", validateId, async (req, res) => {
+  try {
+    await db("accounts")
+      .where("id", req.params.id)
+      .del();
+    res.status(204).end();
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
 function validateAccount(req, res, next) {
   if (Object.keys(req.body).length) {
     if (!req.body.name || !req.body.budget) {

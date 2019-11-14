@@ -30,7 +30,7 @@ Content-Type: application/json
 }
 
 ### PUT ACCOUNTS MISSING DATA
-PUT {{url}}/1
+PUT {{url}}/14
 Content-Type: application/json
 
 {
@@ -45,3 +45,9 @@ Content-Type: application/json
     "name" : "Wrong",
     "budget" : 1000000
 }
+
+### DELETE ACCOUNT WRONG ID
+DELETE  {{url}}/99
+
+### DELETE ACCOUNT WORKING
+DELETE {{url}}/14
