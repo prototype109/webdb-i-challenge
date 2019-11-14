@@ -1,0 +1,47 @@
+@url=http://localhost:4000
+
+### GET ACCOUNTS
+GET {{url}}/
+
+### POST ACCOUNTS WORKING
+POST {{url}}/
+Content-Type: application/json
+
+{
+    "name" : "Sam",
+    "budget" : 300
+}
+
+### POST ACCOUNTS MISSING DATA
+POST {{url}}/
+Content-Type: application/json
+
+{
+    "budget" : 300
+}
+
+### PUT ACCOUNTS WORKING
+PUT {{url}}/14
+Content-Type: application/json
+
+{
+    "name" : "Don",
+    "budget" : 9000
+}
+
+### PUT ACCOUNTS MISSING DATA
+PUT {{url}}/1
+Content-Type: application/json
+
+{
+    "budget" : 300
+}
+
+### PUT ACCOUNTS WRONG ID
+PUT {{url}}/99
+Content-Type: application/json
+
+{
+    "name" : "Wrong",
+    "budget" : 1000000
+}
